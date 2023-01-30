@@ -1,0 +1,41 @@
+boletin2  % [ parameters ]
+		: THEORY
+
+  BEGIN
+
+  % ASSUMING
+   % assuming declarations
+  % ENDASSUMING
+
+  p,q,r,s: bool  %ctes. proposicionales
+
+  %EJ6
+
+  prop_6_1: LEMMA (p => (q OR r)) IMPLIES (NOT r => (p => q))
+
+  prop_6_2: LEMMA ((p OR q) => r) IMPLIES ((p => r) AND (q => r))
+
+  %EJ7
+
+  prop_7_1: LEMMA (p => (q => r)) => ((p => q) => (p => r))
+
+  prop_7_2: LEMMA (p => q) <=> (NOT q => NOT p)
+
+  prop_7_3: LEMMA ((p <=> q) AND (q => r AND NOT s)) <=> (p AND NOT s => r)
+
+  %EJ9
+  % s: optar a vivienda social
+  % p: tener 2 hijos
+  % q: ingresos <10000 euros
+  % r: estar exento de impuestos
+  
+  prop_9: LEMMA ((p AND q) <=> s) AND (q => r) AND (r AND NOT s) => (q AND NOT p)
+
+  %EJ10
+  % s: motor excesivamente deteriorado
+  % p: marcha suavemente
+  % q: estar a punto
+  % r: precio de reventa mas alto
+  
+
+  END boletin2

@@ -1,0 +1,18 @@
+Boletin4  % [ parameters ]
+		: THEORY
+
+  BEGIN
+
+  % ASSUMING
+   % assuming declarations
+  % ENDASSUMING
+
+  n, a, b: VAR nat
+ 
+
+  % EJERCICIO 2
+  prop: LEMMA (FORALL n: (EXISTS a, b: n+18=4*a + 7*b))
+	
+
+  END Boletin4
+  

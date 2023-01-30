@@ -1,0 +1,21 @@
+boletin1  % [ parameters ]
+		: THEORY
+
+  BEGIN
+
+  % ASSUMING
+   % assuming declarations
+  % ENDASSUMING
+
+  x :var nat
+
+  f(x) :nat =x+2
+  g(x) :nat =x-2
+
+  trivial: THEOREM (FORALL (x:nat): f(x) > x)
+
+  a: var nat
+  otro: LEMMA f(a-f(a)) = 0
+
+  END boletin1
+  

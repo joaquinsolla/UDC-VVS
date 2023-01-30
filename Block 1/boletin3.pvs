@@ -1,0 +1,54 @@
+Boletin3  % [ parameters ]
+		: THEORY
+
+  BEGIN
+
+  % ASSUMING
+   % assuming declarations
+  % ENDASSUMING
+
+  T: TYPE+ %tipo arbitrario
+  PU: [T -> bool] %predicado unario para el tipo T
+  QU: [T -> bool] 
+  PB: [T,T -> bool] %predicado binario
+  PT: [T,T,T -> bool] %predicado trinario
+
+  x,y: VAR T %variable del tipo T
+  a,b: T
+
+  % EJERCICIO 5
+  
+  prop_5_2: LEMMA (FORALL x: PU(x)) IMPLIES PU(a)
+
+  prop_5_3: LEMMA (FORALL x: PU(x)) IMPLIES (PU(a) AND PU(b))
+
+  prop_5_4: LEMMA (FORALL x: PU(x) IMPLIES QU(x)) AND PU(a) IMPLIES QU(a)
+
+  prop_5_5: LEMMA (FORALL x: PU(x)) IMPLIES (EXISTS y: PU(y))
+
+  prop_5_6: LEMMA (FORALL x: PU(x)) OR (EXISTS y: NOT PU(y))
+
+  prop_5_7: LEMMA (EXISTS x: PU(x)) OR (EXISTS x: QU(x)) IFF (EXISTS x: PU(x) OR QU(x))
+
+  %falso
+  prop_5_8: LEMMA (EXISTS x: PU(x)) AND (FORALL x: QU(x)) IFF (FORALL x: PU(x) AND QU(x))
+
+  %falso
+  prop_5_9: LEMMA (FORALL x: PU(x)) OR (EXISTS x: QU(x)) IFF (EXISTS x: PU(x) OR QU(x))
+
+  prop_5_10: LEMMA (FORALL x: PU(x) AND QU(x)) IMPLIES (FORALL x: QU(x))
+
+  prop_5_12: LEMMA (FORALL x: PU(x)) AND (FORALL x: QU(x)) IMPLIES (FORALL x: PU(x) OR QU(x))
+
+
+  % EJERCICIO 13
+  % P(x): x es un programa
+  % V(x): x está verificado
+  % Q(x): x es un resultado correcto
+  % C(x): x es correcto
+
+  %prop_13: LEMMA ((FORALL x: PU(x) IMPLIES VU(x)) IMPLIES FORALL y: QU(y) IMPLIES CU(y)) AND
+  %	   (EXISTS x: QU(x) AND NOT C(x))
+
+
+  END Boletin3
