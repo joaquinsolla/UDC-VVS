@@ -1,0 +1,8 @@
+gal\udc\fic\nameserver\servidor\ProxyCacheTest.class
+gal\udc\fic\nameserver\usuario\UsuarioTest.class
+gal\udc\fic\nameserver\usuario\GrupoTest.class
+gal\udc\fic\nameserver\servidor\ControlDeAccesoTest.class
+gal\udc\fic\nameserver\servidor\LogTest.class
+gal\udc\fic\nameserver\cliente\ClienteTest.class
+gal\udc\fic\nameserver\servidor\CadeaDeResponsabilidadeTest.class
+gal\udc\fic\nameserver\servidor\ServidorRealTest.class
