@@ -1,0 +1,21 @@
+e1  % [ parameters ]
+		: THEORY
+
+  BEGIN
+
+  % ASSUMING
+   % assuming declarations
+  % ENDASSUMING
+  
+  T: TYPE+
+  a,b,c: T
+  pU: TYPE = [T-> bool]
+  pB: TYPE = [T,T -> bool]
+  E: pU
+  F,G: pB
+  x,y,z: VAR T
+
+  e1: THEOREM
+  	 (((EXISTS z:(FORALL x,y:(F(x,y)=>G(z,x)))) AND (FORALL x,y:(EXISTS z:((NOT F(y,z))=>E(x)))) AND (FORALL x: NOT(G(x,x)))) IMPLIES (FORALL x: E(x)))
+
+  END e1
